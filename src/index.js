@@ -13,9 +13,9 @@ app.use(express.json())
 
 await run()
 
-app.use("/api", userRouter);
-app.use('/api', deleteUser);
-app.use('/api', getUser);
+app.use("/", userRouter);
+app.use('/', deleteUser);
+app.use('/', getUser);
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
